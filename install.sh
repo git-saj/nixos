@@ -93,7 +93,7 @@ install() {
     mkdir -p ~/Pictures/wallpapers/others
     sleep 0.2
 
-    Copy the wallpapers
+    # Copy the wallpapers
     echo -e "Copying all ${MAGENTA}wallpapers${NORMAL}"
     cp -r wallpapers/wallpaper.png ~/Pictures/wallpapers
     # cp -r wallpapers/otherWallpaper/catppuccin/* ~/Pictures/wallpapers/others/
