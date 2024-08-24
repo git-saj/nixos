@@ -67,7 +67,7 @@ get_host() {
     read -n 1 -r
     echo
 
-    if [[ $REPLY =~ ^[Dd]$ ]]; then
+    if [[ $REPLY =~ ^[Oo]$ ]]; then
         HOST='orbit'
     else
         echo "Invalid choice. Please select 'O' for orbit."
