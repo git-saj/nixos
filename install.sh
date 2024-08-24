@@ -2,7 +2,7 @@
 
 init() {
     # Vars
-    CURRENT_USERNAME='saj'
+    CURRENT_USERNAME='frostphoenix'
 
     # Colors
     NORMAL=$(tput sgr0)
@@ -30,19 +30,19 @@ confirm() {
 
 print_header() {
     echo -E "$CYAN
-      _____              _   ____  _                      _
-     |  ___| __ ___  ___| |_|  _ \| |__   ___   ___ _ __ (_)_  __
-     | |_ | '__/ _ \/ __| __| |_) | '_ \ / _ \ / _ \ '_ \| \ \/ /
-     |  _|| | | (_) \__ \ |_|  __/| | | | (_) |  __/ | | | |>  <
-     |_|  |_|  \___/|___/\__|_|   |_| |_|\___/ \___|_| |_|_/_/\_\
-     _   _ _       ___        ___           _        _ _
-    | \ | (_)_  __/ _ \ ___  |_ _|_ __  ___| |_ __ _| | | ___ _ __
+      _____              _   ____  _                      _        
+     |  ___| __ ___  ___| |_|  _ \| |__   ___   ___ _ __ (_)_  __  
+     | |_ | '__/ _ \/ __| __| |_) | '_ \ / _ \ / _ \ '_ \| \ \/ /  
+     |  _|| | | (_) \__ \ |_|  __/| | | | (_) |  __/ | | | |>  <   
+     |_|  |_|  \___/|___/\__|_|   |_| |_|\___/ \___|_| |_|_/_/\_\  
+     _   _ _       ___        ___           _        _ _           
+    | \ | (_)_  __/ _ \ ___  |_ _|_ __  ___| |_ __ _| | | ___ _ __ 
     |  \| | \ \/ / | | / __|  | || '_ \/ __| __/ _' | | |/ _ \ '__|
-    | |\  | |>  <| |_| \__ \  | || | | \__ \ || (_| | | |  __/ |
-    |_| \_|_/_/\_\\\\___/|___/ |___|_| |_|___/\__\__,_|_|_|\___|_|
+    | |\  | |>  <| |_| \__ \  | || | | \__ \ || (_| | | |  __/ |   
+    |_| \_|_/_/\_\\\\___/|___/ |___|_| |_|___/\__\__,_|_|_|\___|_| 
 
 
-                  $BLUE https://github.com/Frost-Phoenix $RED
+                  $BLUE https://github.com/Frost-Phoenix $RED 
       ! To make sure everything runs correctly DONT run as root ! $GREEN
                         -> '"./install.sh"' $NORMAL
 
@@ -59,21 +59,25 @@ get_username() {
 
 set_username() {
     sed -i -e "s/${CURRENT_USERNAME}/${username}/g" ./flake.nix
-    # sed -i -e "s/${CURRENT_USERNAME}/${username}/g" ./modules/home/audacious/config
+    sed -i -e "s/${CURRENT_USERNAME}/${username}/g" ./modules/home/audacious/config
 }
 
 get_host() {
-    echo -en "Choose a ${GREEN}host${NORMAL} - [${YELLOW}O${NORMAL}]rbit: "
+    echo -en "Choose a ${GREEN}host${NORMAL} - [${YELLOW}D${NORMAL}]esktop, [${YELLOW}L${NORMAL}]aptop or [${YELLOW}V${NORMAL}]irtual machine: "
     read -n 1 -r
     echo
 
-    if [[ $REPLY =~ ^[Oo]$ ]]; then
-        HOST='orbit'
+    if [[ $REPLY =~ ^[Dd]$ ]]; then
+        HOST='desktop'
+    elif [[ $REPLY =~ ^[Ll]$ ]]; then
+        HOST='laptop'
+     elif [[ $REPLY =~ ^[Vv]$ ]]; then
+        HOST='vm'
     else
-        echo "Invalid choice. Please select 'O' for orbit."
+        echo "Invalid choice. Please select 'D' for desktop, 'L' for laptop or 'V' for virtual machine."
         exit 1
     fi
-
+    
     echo -en "$NORMAL"
     echo -en "Use the$YELLOW "$HOST"$NORMAL ${GREEN}host${NORMAL} ? "
     confirm
@@ -96,15 +100,14 @@ install() {
     # Copy the wallpapers
     echo -e "Copying all ${MAGENTA}wallpapers${NORMAL}"
     cp -r wallpapers/wallpaper.png ~/Pictures/wallpapers
-    # cp -r wallpapers/otherWallpaper/catppuccin/* ~/Pictures/wallpapers/others/
-    # cp -r wallpapers/otherWallpaper/nixos/* ~/Pictures/wallpapers/others/
-    # cp -r wallpapers/otherWallpaper/others/* ~/Pictures/wallpapers/others/
+    cp -r wallpapers/otherWallpaper/catppuccin/* ~/Pictures/wallpapers/others/
+    cp -r wallpapers/otherWallpaper/nixos/* ~/Pictures/wallpapers/others/
+    cp -r wallpapers/otherWallpaper/others/* ~/Pictures/wallpapers/others/
     sleep 0.2
 
     # Get the hardware configuration
     echo -e "Copying ${MAGENTA}/etc/nixos/hardware-configuration.nix${NORMAL} to ${MAGENTA}./hosts/${HOST}/${NORMAL}\n"
     cp /etc/nixos/hardware-configuration.nix hosts/${HOST}/hardware-configuration.nix
-    git add .
     sleep 0.2
 
     # Last Confirmation

@@ -1,9 +1,9 @@
-{ pkgs, username, ... }:
+{ pkgs, username, ... }: 
 {
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "gb";
+      xkb.layout = "us,fr";
     };
 
     displayManager.autoLogin = {
