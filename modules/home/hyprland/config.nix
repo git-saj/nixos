@@ -317,7 +317,9 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
+      monitor=DP-1,2560x1440@143.91,1080x240,1.0
+      monitor=DP-2,192x1080@144.0,0x0,1.0
+      monitor=DP-2,transform,3
 
       xwayland {
         force_zero_scaling = true
