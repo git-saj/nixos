@@ -7,6 +7,9 @@
     
       ];
     };
+    opengl = {
+      enable = true;
+    };
   };
   hardware.enableRedistributableFirmware = true;
 }
