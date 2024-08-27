@@ -1,9 +1,6 @@
 {inputs, username, host, ...}: {
   imports =
-       [(import ./aseprite/aseprite.nix)]         # pixel art editor
-    ++ [(import ./audacious.nix)]                 # music player
-    ++ [(import ./btop.nix)]                      # resouces monitor 
-    ++ [(import ./cava.nix)]                      # audio visualizer
+       [(import ./btop.nix)]                      # resouces monitor 
     ++ [(import ./discord.nix)]
     ++ [(import ./fastfetch.nix)]                       # fetch tool
     ++ [(import ./firefox.nix)]             # firefox based browser

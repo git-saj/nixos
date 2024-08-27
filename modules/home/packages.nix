@@ -6,6 +6,9 @@ in
   home.packages = (with pkgs; [
     _2048
 
+    ## code editor
+    zed-editor
+
     ## CLI utility
     ani-cli
     bitwise                           # cli tool for bit / hex manipulation
