@@ -1,11 +1,9 @@
-{ inputs, pkgs, ... }: 
-let 
-  _2048 = pkgs.callPackage ../../pkgs/2048/default.nix {}; 
+{ inputs, pkgs, ... }:
+let
+  _2048 = pkgs.callPackage ../../pkgs/2048/default.nix {};
 in
 {
   home.packages = (with pkgs; [
-    _2048
-
     ## code editor
     zed-editor
 
@@ -18,7 +16,7 @@ in
     entr                              # perform action when file change
     fd                                # find replacement
     ffmpeg
-    file                              # Show file information 
+    file                              # Show file information
     gtt                               # google translate TUI
     gifsicle                          # gif utility
     gtrash                            # rm replacement, put deleted files in system trash
@@ -27,7 +25,7 @@ in
     killall
     lazygit
     libnotify
-	  man-pages					            	  # extra man pages
+	man-pages					            	  # extra man pages
     mpv                               # video player
     ncdu                              # disk space
     nitch                             # systhem fetch util
@@ -52,7 +50,7 @@ in
     xdg-utils
     xxd
 
-    ## CLI 
+    ## CLI
     cbonsai                           # terminal screensaver
     cmatrix
     pipes                             # terminal screensaver
@@ -60,18 +58,9 @@ in
     tty-clock                         # cli clock
 
     ## GUI Apps
-    audacity
-    bleachbit                         # cache cleaner
-    gimp
-    libreoffice
     nix-prefetch-github
     pavucontrol                       # pulseaudio volume controle (GUI)
-    prismlauncher                     # minecraft launcher
-    qalculate-gtk                     # calculator
-    soundwireserver                   # pass audio to android phone
     vlc
-    winetricks
-    wineWowPackages.wayland
     zenity
 
     # C / C++
@@ -81,6 +70,5 @@ in
     # Python
     python3
 
-    inputs.alejandra.defaultPackage.${system}
   ]);
 }
