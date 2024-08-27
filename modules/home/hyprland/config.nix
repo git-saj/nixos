@@ -1,8 +1,8 @@
-{ ... }: 
+{ ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
-      
+
       # autostart
       exec-once = [
         "systemctl --user import-environment &"
@@ -19,18 +19,18 @@
         "hyprlock"
 
         ## App auto start
-        "[workspace 1 silent] floorp"
+        "[workspace 1 silent] firefox"
         "[workspace 2 silent] kitty"
       ];
 
       input = {
         kb_layout = "us,fr";
-        kb_options ="grp:alt_caps_toggle"; 
+        kb_options ="grp:alt_caps_toggle";
         numlock_by_default = true;
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
-        sensitivity = 0;
+        sensitivity = -0.5;
         touchpad = {
           natural_scroll = true;
         };
@@ -141,7 +141,7 @@
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
+        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
@@ -149,8 +149,7 @@
         "$mainMod, Space, centerwindow,"
         "$mainMod, Space, resizeactive, exact 950 600"
         "$mainMod, D, exec, rofi -show drun"
-        "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
-        "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
+        "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland'"
         "$mainMod, Escape, exec, swaylock"
         "ALT, Escape, exec, hyprlock"
         "$mainMod SHIFT, Escape, exec, power-menu"
@@ -165,8 +164,7 @@
         "$mainMod SHIFT, W, exec, vm-start"
 
         # screenshot
-        "$mainMod, Print, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
-        ",Print, exec, grimblast --notify --cursor --freeze copy area"
+        "$mainMod SHIFT, S, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
 
         # switch focus
         "$mainMod, left, movefocus, l"
@@ -250,7 +248,6 @@
         "size 1200 725,imv"
         "float,mpv"
         "center,mpv"
-        "tile,Aseprite"
         "size 1200 725,mpv"
         "float,title:^(float_kitty)$"
         "center,title:^(float_kitty)$"
@@ -275,16 +272,9 @@
         "pin, title:^(Picture-in-Picture)$"
         "opacity 1.0 override 1.0 override, title:^(.*imv.*)$"
         "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
-        "opacity 1.0 override 1.0 override, class:(Aseprite)"
-        "opacity 1.0 override 1.0 override, class:(Unity)"
-        "opacity 1.0 override 1.0 override, class:(floorp)"
-        "opacity 1.0 override 1.0 override, class:(evince)"
-        "workspace 5, class:^(floorp)$"
-        "workspace 4, class:^(Aseprite)$"
-        "workspace 4, class:^(Gimp-2.10)$"
-        "workspace 5, class:^(Audacious)$"
+        "opacity 1.0 override 1.0 override, class:(firefox)"
         "workspace 5, class:^(Spotify)$"
-        "workspace 4, class:^(discord)$"
+        "workspace 4, class:^(Discord)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
         "float,class:^(zenity)$"
