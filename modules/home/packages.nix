@@ -58,6 +58,7 @@ in
     tty-clock                         # cli clock
 
     ## GUI Apps
+    google-chrome
     nix-prefetch-github
     pavucontrol                       # pulseaudio volume controle (GUI)
     vlc

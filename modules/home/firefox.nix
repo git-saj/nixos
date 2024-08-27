@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 {
   programs.firefox = {
     enable = true;
@@ -10,6 +10,7 @@
           settings = {
             "browser.search.defaultenginename" = "DuckDuckGo";
             "browser.search.order.1" = "DuckDuckGo";
+            "browser.toolbars.bookmarks.visibility" = "never";
           };
           search = {
             force = true;
