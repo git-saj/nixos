@@ -2,12 +2,11 @@
   imports =
        [(import ./aseprite/aseprite.nix)]         # pixel art editor
     ++ [(import ./audacious.nix)]                 # music player
-    ++ [(import ./bat.nix)]                       # better cat command
     ++ [(import ./btop.nix)]                      # resouces monitor 
     ++ [(import ./cava.nix)]                      # audio visualizer
-    ++ [(import ./discord/discord.nix)]                   # discord with catppuccin theme
+    ++ [(import ./discord.nix)]
     ++ [(import ./fastfetch.nix)]                       # fetch tool
-    ++ [(import ./floorp/floorp.nix)]             # firefox based browser
+    ++ [(import ./firefox.nix)]             # firefox based browser
     ++ [(import ./fzf.nix)]                       # fuzzy finder
     ++ [(import ./gaming.nix)]                    # packages related to gaming
     ++ [(import ./git.nix)]                       # version control
