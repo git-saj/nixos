@@ -21,10 +21,12 @@
         ## App auto start
         "[workspace 1 silent] firefox"
         "[workspace 2 silent] kitty"
+        "[workspace 4 silent] vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
+        "[workspace 5 silent] spotify"
       ];
 
       input = {
-        kb_layout = "us,fr";
+        kb_layout = "gb";
         kb_options ="grp:alt_caps_toggle";
         numlock_by_default = true;
         follow_mouse = 0;
@@ -141,6 +143,7 @@
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
+        "$mainMod, Z, exec, zed"
         "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
@@ -149,7 +152,6 @@
         "$mainMod, Space, centerwindow,"
         "$mainMod, Space, resizeactive, exact 950 600"
         "$mainMod, D, exec, rofi -show drun"
-        "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland'"
         "$mainMod, Escape, exec, swaylock"
         "ALT, Escape, exec, hyprlock"
         "$mainMod SHIFT, Escape, exec, power-menu"
@@ -274,7 +276,7 @@
         "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
         "opacity 1.0 override 1.0 override, class:(firefox)"
         "workspace 5, class:^(Spotify)$"
-        "workspace 4, class:^(Discord)$"
+        "workspace 4, class:^(.*Discord)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
         "float,class:^(zenity)$"
