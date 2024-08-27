@@ -21,7 +21,7 @@
         ## App auto start
         "[workspace 1 silent] firefox"
         "[workspace 2 silent] kitty"
-        "[workspace 4 silent] vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
+        "[workspace 4 silent] vesktop"
         "[workspace 5 silent] spotify"
       ];
 
@@ -144,8 +144,7 @@
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
         "$mainMod, Z, exec, zed"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'"
-        "$mainMod SHIFT, D, exec, hpyrctl dispatch exec '[workspace 4 silent] vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland'"
+        "$mainMod, B, exec, firefox"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
@@ -276,8 +275,8 @@
         "opacity 1.0 override 1.0 override, title:^(.*imv.*)$"
         "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
         "opacity 1.0 override 1.0 override, class:(firefox)"
+        "workspace 4, class:^(vesktop)$"
         "workspace 5, class:^(Spotify)$"
-        "workspace 4, class:^(.*Discord.*)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
         "float,class:^(zenity)$"
