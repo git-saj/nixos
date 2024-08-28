@@ -60,6 +60,7 @@ in
     ## GUI Apps
     google-chrome
     nix-prefetch-github
+    obsidian
     pavucontrol                       # pulseaudio volume controle (GUI)
     vlc
     zenity
