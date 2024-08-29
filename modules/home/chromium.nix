@@ -3,8 +3,7 @@
     programs.chromium = {
         enable = true;
         commandLineArgs = [
-            "--enable-features=UseOzonePlatform"
-            "--ozone-platform=wayland"
+            "--ozone-platform-hint=wayland"
         ];
         extensions = [
             { id = "ghmbeldphafepmbegfdlkpapadhbakde"; } # protonpass
