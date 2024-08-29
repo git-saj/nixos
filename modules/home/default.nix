@@ -1,6 +1,7 @@
 {inputs, username, host, ...}: {
   imports =
        [(import ./btop.nix)]                      # resouces monitor
+    ++ [(import ./chromium.nix)]                   # chromium browser
     ++ [(import ./discord.nix)]
     ++ [(import ./fastfetch.nix)]                       # fetch tool
     ++ [(import ./firefox.nix)]             # firefox based browser
