@@ -1,6 +1,6 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
-    vesktop
+    vesktop # using vesktop as this allows for krist support and better screensharing
   ];
 }

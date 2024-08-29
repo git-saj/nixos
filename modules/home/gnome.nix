@@ -22,5 +22,8 @@
       use-system-font = false;
       wrap-text = false;
     };
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark"; # enable global dark mode
+    };
   };
 }
