@@ -9,7 +9,7 @@
         "hash dbus-update-activation-environment 2>/dev/null &"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
         "nm-applet &"
-        "wl-clip-persist --clipboard both"
+        "wl-clip-persist --clipboard regular"
         "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "poweralertd &"
@@ -21,7 +21,6 @@
         ## App auto start
         "[workspace 1 silent] firefox"
         "[workspace 2 silent] kitty"
-        "[workspace 4 silent] vesktop"
         "[workspace 5 silent] spotify"
       ];
 
@@ -166,7 +165,7 @@
         "$mainMod SHIFT, W, exec, vm-start"
 
         # screenshot
-        "$mainMod SHIFT, S, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        "$mainMod SHIFT, S, exec, grimblast --notify --cursor --freeze copysave area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
 
         # switch focus
         "$mainMod, left, movefocus, l"
