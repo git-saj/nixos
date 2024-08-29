@@ -1,3 +1,6 @@
+# TODO:
+# - use duckduckgo for default search engine
+# - open previous tabs on startup
 { config, pkgs, ... }:
 {
     programs.chromium = {
