@@ -58,6 +58,7 @@ in
     tty-clock                         # cli clock
 
     ## GUI Apps
+    bruno
     nix-prefetch-github
     obsidian
     pavucontrol                       # pulseaudio volume controle (GUI)
