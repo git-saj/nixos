@@ -63,6 +63,7 @@ in
     obsidian
     pavucontrol                       # pulseaudio volume controle (GUI)
     vlc
+    freerdp
     zenity
 
     # C / C++

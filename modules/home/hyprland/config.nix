@@ -79,9 +79,9 @@
 
       decoration = {
         rounding = 0;
-        # active_opacity = 0.90;
-        # inactive_opacity = 0.90;
-        # fullscreen_opacity = 1.0;
+        active_opacity = 0.90;
+        inactive_opacity = 0.90;
+        fullscreen_opacity = 1.0;
 
         blur = {
           enabled = true;
@@ -274,7 +274,6 @@
         "pin, title:^(Picture-in-Picture)$"
         "opacity 1.0 override 1.0 override, title:^(.*imv.*)$"
         "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
-        "opacity 1.0 override 1.0 override, class:(firefox)"
         "workspace 4, class:^(vesktop)$"
         "workspace 5, class:^(Spotify)$"
         "idleinhibit focus, class:^(mpv)$"
