@@ -24,6 +24,10 @@
         "[workspace 5 silent] spotify"
       ];
 
+      cursor = {
+        no_hardware_cursors = true;
+      };
+
       input = {
         kb_layout = "gb";
         kb_options ="grp:alt_caps_toggle";
