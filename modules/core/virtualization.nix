@@ -5,6 +5,9 @@
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
+    dive
+    podman-tui
+    docker-compose
     virt-manager
     virt-viewer
     spice spice-gtk
@@ -16,6 +19,11 @@
 
   # Manage the virtualisation services
   virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
     libvirtd = {
       enable = true;
       qemu = {
