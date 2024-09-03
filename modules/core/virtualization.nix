@@ -6,6 +6,7 @@
   # Install necessary packages
   environment.systemPackages = with pkgs; [
     dive
+    devpod
     podman-tui
     docker-compose
     virt-manager
