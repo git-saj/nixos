@@ -18,14 +18,15 @@
         "wl-paste --watch cliphist store &"
         "hyprlock"
 
-        ## focus workspace 1 on startup
-        "hyprctl dispatch workspace 1"
         ## App auto start
         "sleep 10 && hyprctl dispatch exec '[workspace 1 silent] firefox' &"
         "sleep 10 && hyprctl dispatch exec '[workspace 2 silent] zed' &"
         "sleep 10 && hyprctl dispatch exec '[workspace 3 silent] vesktop --ozone-platform-hint=wayland' &"
         "sleep 10 && hyprctl dispatch exec '[workspace 4 silent] chromium' &"
         "sleep 10 && hyprctl dispatch exec '[workspace 5 silent] spotify' &"
+
+        ## focus workspace 1 on startup
+        "hyprctl dispatch workspace 1"
       ];
 
       workspace = [
