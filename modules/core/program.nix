@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: 
+{ pkgs, lib, ... }:
 {
   programs.dconf.enable = true;
   programs.zsh.enable = true;
@@ -7,6 +7,7 @@
     enableSSHSupport = true;
     # pinentryFlavor = "";
   };
+  programs.ssh.startAgent = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
 }
