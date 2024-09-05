@@ -1,13 +1,12 @@
 { config, pkgs, username, ... }:
 {
   # Add user to libvirtd group
-  users.users.${username}.extraGroups = [ "libvirtd" ];
+  users.users.${username}.extraGroups = [ "docker", "libvirtd" ];
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
     dive
     devpod
-    podman-tui
     docker-compose
     virt-manager
     virt-viewer
@@ -20,10 +19,8 @@
 
   # Manage the virtualisation services
   virtualisation = {
-    podman = {
-      enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
+    docker = {
+     enable = true;
     };
     libvirtd = {
       enable = true;
