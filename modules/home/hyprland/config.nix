@@ -20,8 +20,18 @@
 
         ## App auto start
         "[workspace 1 silent] firefox"
-        "[workspace 2 silent] kitty"
+        "[workspace 2 silent] zed"
+        "[workspace 3 silent] vesktop --ozone-platform-hint=wayland"
+        "[workspace 4 silent] chromium"
         "[workspace 5 silent] spotify"
+      ];
+
+      workspace = [
+        "1, monitor:DP-1"
+        "2, monitor:DP-1"
+        "3, monitor:DP-2"
+        "4, monitor:DP-2"
+        "5, monitor:DP-2"
       ];
 
       cursor = {
@@ -148,7 +158,8 @@
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
         "$mainMod, Z, exec, zed"
         "$mainMod, B, exec, firefox"
-        "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] vesktop --ozone-platform-hint=wayland'"
+        "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 3 silent] vesktop --ozone-platform-hint=wayland'"
+        "$mainMod SHIFT, C, exec, hyprctl dispatch exec '[workspace 4 silent] chromium'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
