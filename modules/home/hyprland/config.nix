@@ -18,12 +18,14 @@
         "wl-paste --watch cliphist store &"
         "hyprlock"
 
+        ## focus workspace 1 on startup
+        "hyprctl dispatch workspace 1"
         ## App auto start
-        "[workspace 1 silent] firefox"
-        "[workspace 2 silent] zed"
-        "[workspace 3 silent] vesktop --ozone-platform-hint=wayland"
-        "[workspace 4 silent] chromium"
-        "[workspace 5 silent] spotify"
+        "sleep 10 && hyprctl dispatch exec '[workspace 1 silent] firefox' &"
+        "sleep 10 && hyprctl dispatch exec '[workspace 2 silent] zed' &"
+        "sleep 10 && hyprctl dispatch exec '[workspace 3 silent] vesktop --ozone-platform-hint=wayland' &"
+        "sleep 10 && hyprctl dispatch exec '[workspace 4 silent] chromium' &"
+        "sleep 10 && hyprctl dispatch exec '[workspace 5 silent] spotify' &"
       ];
 
       workspace = [
@@ -289,7 +291,7 @@
         "pin, title:^(Picture-in-Picture)$"
         "opacity 1.0 override 1.0 override, title:^(.*imv.*)$"
         "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
-        "workspace 4, class:^(vesktop)$"
+        "workspace 3, class:^(vesktop)$"
         "workspace 5, class:^(Spotify)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
