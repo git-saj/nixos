@@ -42,7 +42,7 @@
       };
 
       input = {
-        kb_layout = "gb";
+        kb_layout = "us";
         kb_options ="grp:alt_caps_toggle";
         numlock_by_default = true;
         follow_mouse = 0;
