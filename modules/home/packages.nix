@@ -53,6 +53,7 @@ in
     ## CLI
     cbonsai                           # terminal screensaver
     cmatrix
+    dogdns                            # dog dns client
     pipes                             # terminal screensaver
     sl
     tty-clock                         # cli clock
