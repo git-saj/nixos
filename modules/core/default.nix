@@ -13,6 +13,7 @@
     ++ [ (import ./system.nix) ]
     ++ [ (import ./user.nix) ]
     ++ [ (import ./wayland.nix) ]
+    ++ [ (import ./virtualcamera.nix) ]
     ++ [ (import ./virtualization.nix) ]
     ++ [ (import ./nvidia.nix) ];
 }

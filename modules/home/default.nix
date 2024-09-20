@@ -11,6 +11,7 @@
     ++ [(import ./gtk.nix)]                       # gtk theme
     ++ [(import ./hyprland)]                      # window manager
     ++ [(import ./kitty.nix)]                     # terminal
+    ++ [(import ./obs.nix)]                       # obs studio
     ++ [(import ./swaync/swaync.nix)]             # notification deamon
     ++ [(import ./packages.nix)]                  # other packages
     ++ [(import ./rofi.nix)]                      # launcher
