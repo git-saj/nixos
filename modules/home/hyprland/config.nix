@@ -19,7 +19,7 @@
         "hyprlock"
 
         ## App auto start
-        "sleep 10 && hyprctl dispatch exec '[workspace 1 silent] firefox' &"
+        "sleep 10 && hyprctl dispatch exec '[workspace 1 silent] zen' &"
         "sleep 10 && hyprctl dispatch exec '[workspace 2 silent] zed' &"
         "sleep 10 && hyprctl dispatch exec '[workspace 3 silent] vesktop --ozone-platform-hint=wayland' &"
         "sleep 10 && hyprctl dispatch exec '[workspace 4 silent] chromium' &"
@@ -160,7 +160,7 @@
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
         "$mainMod, Z, exec, zed"
-        "$mainMod, B, exec, firefox"
+        "$mainMod, B, exec, zen"
         "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 3 silent] vesktop --ozone-platform-hint=wayland'"
         "$mainMod SHIFT, C, exec, hyprctl dispatch exec '[workspace 4 silent] chromium'"
         "$mainMod, Q, killactive,"
@@ -279,8 +279,8 @@
         "float,udiskie"
         "float,title:^(Transmission)$"
         "float,title:^(Volume Control)$"
-        "float,title:^(Firefox — Sharing Indicator)$"
-        "move 0 0,title:^(Firefox — Sharing Indicator)$"
+        "float,title:^(Zen — Sharing Indicator)$"
+        "move 0 0,title:^(Zen — Sharing Indicator)$"
         "size 700 450,title:^(Volume Control)$"
         "move 40 55%,title:^(Volume Control)$"
       ];
@@ -295,7 +295,7 @@
         "workspace 3, class:^(vesktop)$"
         "workspace 5, class:^(Spotify)$"
         "idleinhibit focus, class:^(mpv)$"
-        "idleinhibit fullscreen, class:^(firefox)$"
+        "idleinhibit fullscreen, class:^(zen)$"
         "float,class:^(zenity)$"
         "center,class:^(zenity)$"
         "size 850 500,class:^(zenity)$"

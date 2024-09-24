@@ -4,6 +4,9 @@ let
 in
 {
   home.packages = (with pkgs; [
+    ## browser
+    inputs.zen-browser.packages."${system}".specific
+
     ## code editor
     zed-editor
 
@@ -25,7 +28,7 @@ in
     killall
     lazygit
     libnotify
-	man-pages					            	  # extra man pages
+  	man-pages					            	  # extra man pages
     mpv                               # video player
     ncdu                              # disk space
     nitch                             # systhem fetch util
@@ -73,6 +76,5 @@ in
 
     # Python
     python3
-
   ]);
 }

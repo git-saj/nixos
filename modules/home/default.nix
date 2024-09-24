@@ -4,7 +4,6 @@
     ++ [(import ./chromium.nix)]                   # chromium browser
     ++ [(import ./discord.nix)]
     ++ [(import ./fastfetch.nix)]                       # fetch tool
-    ++ [(import ./firefox.nix)]             # firefox based browser
     ++ [(import ./fzf.nix)]                       # fuzzy finder
     ++ [(import ./git.nix)]                       # version control
     ++ [(import ./gnome.nix)]                       # gnome apps

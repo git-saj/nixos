@@ -2,7 +2,7 @@
 with lib;
 let
   defaultApps = {
-    browser = [ "firefox.desktop" ];
+    browser = [ "zen.desktop" ];
     text = [ "org.gnome.TextEditor.desktop" ];
     image = [ "com.interversehq.qView.desktop" ];
     audio = [ "mpv.desktop" ];
