@@ -29,7 +29,6 @@
         ovmf.enable = true;
         ovmf.packages = [ pkgs.OVMFFull.fd ];
       };
-      onShutdown = "shutdown";
     };
     spiceUSBRedirection.enable = true;
   };
