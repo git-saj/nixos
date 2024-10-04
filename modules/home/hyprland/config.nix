@@ -163,6 +163,7 @@
         "$mainMod, B, exec, zen"
         "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 3 silent] vesktop --ozone-platform-hint=wayland'"
         "$mainMod SHIFT, C, exec, hyprctl dispatch exec '[workspace 4 silent] chromium'"
+        "$mainMod, O, exec, obsidian --ozone-platform-hint=wayland"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
